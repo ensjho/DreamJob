@@ -1,7 +1,8 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-// import Home from "./Home";
+import Home from "./Home";
 import CompanyList from "./CompanyList"
+import CompanyDetail from "./CompanyDetail"
 
 /** Site-wide routes.
  */
@@ -11,19 +12,19 @@ function Routes() {
   return (
     <div className="pt-5">
       <Switch>
-        {/* <Route exact path="/">
+        <Route exact path="/">
           <Home />
-        </Route> */}
+        </Route>
         <Route exact path="/companies" >
           <CompanyList/>
         </Route>
         {/* <Route exact path="/jobs" >
           <Jobs />
         </Route> */}
-        {/* <Route exact path="/companies/:handle" >
+<Route exact path="/companies/:handle" >
           <CompanyDetail />
         </Route>
-        <Route path="/profile">
+        {/* <Route path="/profile">
           <ProfileForm />
         </Route>
         <Route exact path="/login">
@@ -31,7 +32,7 @@ function Routes() {
         </Route>
         <Route exact path="/signup">
           <SignupForm />
-        </Route> */}
+        </Route>  */}
         <Redirect to="/" />
       </Switch>
     </div>

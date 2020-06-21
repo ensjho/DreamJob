@@ -1,0 +1,23 @@
+.Homepage {
+  /* put around the vertical center of page */
+  height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+}
+
+.homepage-title{
+  font-size: calc(4vh + 4vw);
+  text-shadow: 3px 3px 3px #288193;
+}
+
+.lead{
+  font-size: calc(1vh + 1vh);
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.moon{
+  width:calc(4vh + 4vw);
+  height: calc(4vh + 4vw);
+  margin-bottom: 40px;
+}
