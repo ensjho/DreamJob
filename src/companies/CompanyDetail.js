@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import JoblyApi from "./Api";
+import JoblyApi from "../Api";
+import JobCardList from "../jobs/JobCardList";
 
 /** Company Detail page.
  * Renders information about company, along with the jobs at that company.
@@ -12,8 +13,9 @@ function CompanyDetail() {
 
   useEffect(function getCompanyAndJobsForUser() {
     async function getCompanyAndJobs() {
-      const c = await JoblyApi.getCompany(handle);
-      setCompany(c);
+      const companyResult = await JoblyApi.getCompany(handle);
+      setCompany(companyResult);
+
     }
 
     getCompanyAndJobs();
@@ -26,6 +28,7 @@ function CompanyDetail() {
     <div className="CompanyDetail col-md-8 offset-md-2">
       <h4 className="text-capitalize">{company.name}</h4>
       <p>{company.description}</p>
+      <JobCardList jobs={company.jobs}></JobCardList>
     </div>
   );
 }

@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import JoblyApi from "./Api";
+import JoblyApi from "../Api";
 import CompanyCard from './CompanyCard';
-import SearchForm from './SearchForm';
+import SearchForm from '../general/SearchForm';
+import Loading from '../general/Loading';
 
-/** Renders list of companies, loaded from API */
+/** Renders list of companies, loaded from API, Seacrh bar to look for companies
+ * 
+ *  Routed at /companies
+*/
 
 function CompanyList() {
   const [companies, setCompanies] = useState(null);
@@ -18,7 +22,7 @@ function CompanyList() {
     setCompanies(companies);
   }
 
-  if (!companies) return (<div> loading </div>);
+  if (!companies) return <Loading/>;
 
   return (
     <div className="CompanyList col-md-8 offset-md-2">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from "react-router-dom";
-import Routes from "./Routes.js"
-import Navigation from "./Navigation";
+import Routes from "./routes/Routes.js"
+import Navigation from "./routes/Navigation";
 
 
 function App() {

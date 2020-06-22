@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import defaultLogo from "./build.svg";
+import defaultLogo from "../img/build.svg";
 import "./CompanyCard.css"
 
 /** Show limited information about a company

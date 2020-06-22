@@ -1,10 +1,15 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Home from "./Home";
-import CompanyList from "./CompanyList"
-import CompanyDetail from "./CompanyDetail"
+import Home from "../general/Home";
+import CompanyList from "../companies/CompanyList"
+import CompanyDetail from "../companies/CompanyDetail"
+import JobList from "../jobs/JobList"
 
 /** Site-wide routes.
+ *  
+ * 
+ *  Redirects to homepage if route does not match.
+ *  App -> Routes
  */
 
 function Routes() {
@@ -16,13 +21,13 @@ function Routes() {
           <Home />
         </Route>
         <Route exact path="/companies" >
-          <CompanyList/>
+          <CompanyList />
         </Route>
-        {/* <Route exact path="/jobs" >
-          <Jobs />
-        </Route> */}
-<Route exact path="/companies/:handle" >
+        <Route exact path="/companies/:handle" >
           <CompanyDetail />
+        </Route>
+        <Route exact path="/jobs" >
+          <JobList />
         </Route>
         {/* <Route path="/profile">
           <ProfileForm />

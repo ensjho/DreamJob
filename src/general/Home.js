@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import moon from "./moon.svg"
+import moon from "../img/moon.svg"
 import "./Home.css";
 
 /** Homepage of site.
