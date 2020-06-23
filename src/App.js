@@ -48,7 +48,6 @@ function App() {
     try {
       let token = await DreamJobApi.login(loginData);
       setToken(token);
-      console.log("hello")
       return { success: true };
     } catch (errors) {
       console.error("login failed", errors);
