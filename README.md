@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Jobly
+React-Jobly is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
 
-## Available Scripts
-
-In the project directory, you can run:
+## Features
+- Login/Logout
+- Edit Profile
+- Search Companies & Jobs
+- Signup
+- Apply to Job
 
 ### `npm start`
 
