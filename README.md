@@ -1,12 +1,12 @@
-# React-Jobly
+### React-Jobly
 React-Jobly is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
 
-## Features
-- Login/Logout
-- Edit Profile
-- Search Companies & Jobs
-- Signup
-- Apply to Job
+  ## Features
+  - Login/Logout
+  - Edit Profile
+  - Search Companies & Jobs
+  - Signup
+  - Apply to Job
 
 ### `npm start`
 
