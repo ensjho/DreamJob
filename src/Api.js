@@ -1,5 +1,4 @@
 import axios from "axios";
-// import { TOKEN_STORAGE_ID } from "./App.js"
 
 const BASE_URL = process.env.BASE_URL || "http://localhost:3001";
 
@@ -7,10 +6,10 @@ const BASE_URL = process.env.BASE_URL || "http://localhost:3001";
  * Static class tying together methods used to get/send to to the API.
  */
 
-class JoblyApi {
+class DreamJobApi {
   static async request(endpoint, params = {}, verb = "get") {
 
-    const _token = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmciLCJpc19hZG1pbiI6ZmFsc2UsImlhdCI6MTU1MzcwMzE1M30.COmFETEsTxN_VfIlgIKw0bYJLkvbRQNgO1XCSE8NZ0U");
+    const _token = localStorage.getItem("token");
 
     const data = (verb === "get")
       ? { params: { _token, ...params } } // GET
@@ -69,4 +68,4 @@ class JoblyApi {
 }
 
 
-export default JoblyApi;
+export default DreamJobApi;

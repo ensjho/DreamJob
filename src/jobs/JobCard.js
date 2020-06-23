@@ -2,7 +2,9 @@ import React from "react";
 import "./JobCard.css";
 
 
-function JobCard({id, title, salary, equity, appliedState  }) {
+function JobCard({id, title, salary, equity, appliedState, apply  }) {
+
+  const handleApply = evt => apply(id)
 
   return (
     <div className="JobCard card">
@@ -14,6 +16,7 @@ function JobCard({id, title, salary, equity, appliedState  }) {
         <div>Equity: {equity * 100}%</div>
         <button
           className="btn btn-danger font-weight-bold text-uppercase float-right"
+          onClick={handleApply}
           disabled={appliedState}
         >
           {appliedState ? "Applied" : "Apply"}

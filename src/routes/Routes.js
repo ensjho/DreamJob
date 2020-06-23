@@ -1,44 +1,37 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "../general/Home";
-import CompanyList from "../companies/CompanyList"
-import CompanyDetail from "../companies/CompanyDetail"
-import JobList from "../jobs/JobList"
+import LoginSignup from "../auth/LoginSignup"
+import PrivateRoutes from "./PrivateRoutes";
 
 /** Site-wide routes.
- *  
  * 
- *  Redirects to homepage if route does not match.
+ *  PrivateRoutes(Authroized to only logged in Users):
+ *  -CompanyList
+ *  -CompanyDetail
+ *  -JobList
+ *  -ProfileForm
+ * 
  *  App -> Routes
  */
 
-function Routes() {
-
+function Routes({ login, signup }) {
   return (
     <div className="pt-5">
       <Switch>
+        
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/companies" >
-          <CompanyList />
-        </Route>
-        <Route exact path="/companies/:handle" >
-          <CompanyDetail />
-        </Route>
-        <Route exact path="/jobs" >
-          <JobList />
-        </Route>
-        {/* <Route path="/profile">
-          <ProfileForm />
-        </Route>
+
         <Route exact path="/login">
-          <LoginForm />
+          <LoginSignup login={login} signup={signup} />
         </Route>
-        <Route exact path="/signup">
-          <SignupForm />
-        </Route>  */}
+
+        <PrivateRoutes />
+
         <Redirect to="/" />
+
       </Switch>
     </div>
   );

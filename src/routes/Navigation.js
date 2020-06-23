@@ -1,46 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import AuthContext from "../auth/AuthContext";
 import "./Navigation.css";
 
 /** Renders Navigation Bar 
  * => if user Logged in => renders LoggedInNav()
  * => if user NOT logged in => renders loggedOutNav()
- * 
  * App -> Navigation
  */
 
-function Navigation() {
-  let currentUser;
+function Navigation({logout}) {
+  const  { currentUser } = useContext(AuthContext);
 
-  function loggedInNav() {
-    return (
+  /** If user is logged in and currentUser is defined 
+   *       => renders logged in navbar
+   *  else => renders logged out navbar
+   */
+  let navigationBar;
+  if (currentUser) {
+    navigationBar = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item mr-4">
-          <NavLink className="nav-link" to="/companies">
+          <NavLink className="nav-link text-info" to="/companies">
             Companies
           </NavLink>
         </li>
         <li className="nav-item mr-4">
-          <NavLink className="nav-link" to="/jobs">
+          <NavLink className="nav-link text-info" to="/jobs">
             Jobs
           </NavLink>
         </li>
         <li className="nav-item mr-4">
-          <NavLink className="nav-link" to="/profile">
+          <NavLink className="nav-link text-info" to="/profile">
             Profile
           </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">
-            Log out {currentUser.first_name || currentUser.username}
+          <Link className="nav-link text-info" to="/" onClick={logout}>
+            Log out
           </Link>
         </li>
       </ul>
     );
-  }
-
-  function loggedOutNav() {
-    return (
+  } else {
+    navigationBar = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item mr-4">
           <NavLink className="nav-link text-info font-weight-bold" to="/login">
@@ -48,7 +51,7 @@ function Navigation() {
           </NavLink>
         </li>
       </ul>
-    );
+    )
   }
 
   return (
@@ -56,7 +59,7 @@ function Navigation() {
       <Link className="navbar-brand text-info font-weight-bold" to="/">
         DreamJob
       </Link>
-      {currentUser ? loggedInNav() : loggedOutNav()}
+      {navigationBar}
     </nav>
   );
 }

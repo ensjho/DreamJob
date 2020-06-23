@@ -1,0 +1,11 @@
+.login {
+  border-radius: 0%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-left: 3px;
+}
+.signup {
+  border-radius: 0%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}

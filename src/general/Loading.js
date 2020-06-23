@@ -4,9 +4,11 @@ import React from 'react';
 
 function Loading() {
   return (
-    <h1 className="Loading text-center font-weight-bold text-primary">
-      Loading ...
-    </h1>
+    <div className="d-flex justify-content-center">
+      <div className="spinner-border-lg text-primary" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
   );
 }
 

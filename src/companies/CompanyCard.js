@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import defaultLogo from "../img/build.svg";
 import "./CompanyCard.css"
 
-/** Show limited information about a company
- * Is rendered by CompanyList to show a "card" for each company.
- */
+/*Renders a company card on Company List */
 
-function CompanyCard({ name, description, logo_url, handle }) {
-
+function CompanyCard({ name, description, handle }) {
   return (
     <Link className="CompanyCard card" to={`/companies/${handle}`}>
       <div className="card-body">
