@@ -25,7 +25,6 @@ function LoginSignup({ login, signup }) {
   /**Updates form data field*/
   const handleChange = evt => {
     const { name, value } = evt.target;
-    console.log(name, value)
     setFormData(formData => ({
       ...formData,
       [name]: value
