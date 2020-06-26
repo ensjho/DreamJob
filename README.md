@@ -1,5 +1,5 @@
-# React-Jobly
-React-Jobly is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
+# React-DreamJob
+React-DreamJob is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
 
 Deployed: http://dreamjob.demo.ericjho.com/
 
