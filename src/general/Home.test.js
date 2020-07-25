@@ -1,9 +1,8 @@
-import React from "./node_modules/react";
-import { render } from "./node_modules/@testing-library/react";
-import { MemoryRouter } from "./node_modules/react-router";
-import Home from "./Homepage";
+import React from "react";
+import { render } from  "@testing-library/react";
+import { MemoryRouter } from "react-router";
+import Home from "./Home";
 import { UserProvider } from "../testUtils";
-
 
 it("matches snapshot", function() {
   const { asFragment } = render(

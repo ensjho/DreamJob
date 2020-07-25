@@ -11,7 +11,7 @@ function CompanyCard({ name, description, handle }) {
       <div className="card-body">
         <h6 className="card-title d-flex justify-content-between">
           <span className="text-capitalize">{name}</span>
-          <img src={defaultLogo} alt={`${name} Logo`} />
+          <img src={defaultLogo || ""} alt={`${name} Logo`} />
         </h6>
         <p>{description}</p>
       </div>
