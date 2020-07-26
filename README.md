@@ -1,46 +1,46 @@
-# React-DreamJob
-React-DreamJob is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
 ![Dream Job Demo](dreamjob_demo/DreamJob.gif)
 
+# DreamJob
 
-Deployed: http://dreamjob.demo.ericjho.com/
+DreamJob is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
+[Live Demo]http://dreamjob.demo.ericjho.com/
 
-## Technologies 
+### Technologies 
 - React.js
 - Express.js
 - PostgreSQL
 - Node.js
 
-## Features
-- Login/Logout
+### Features
+- Login/Logout -> authorization and authentication middleware to protect private routes
 - Edit Profile
-- Search Companies & Jobs
-- Signup
-- Apply to Job
+- Search Companies & Jobs: browse and search hiring companies and view the jobs posted by each company
+- Sign up
+- Apply for posted jobs
 
-### `npm start`
+# DreamJob Component Hierarchy
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Dream Job Component Hierarchy](dreamjob_demo/DJhierarchy.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Getting Started on the Server
 
-### `npm test`
+1. Clone the repository
+2. `cd server`
+3. `npm install`
+4. `createdb jobly`
+4. `createdb jobly-test`
+5. `psql jobly < data.sql`
+6. `npm start`
+7. `npm test` to run the tests
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Getting Started on the Client
 
-### `npm run build`
+1. `cd ../client`
+2. `npm install`
+3. `npm start`
+4. `npm test` to run the tests
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Note
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* The [deployed version of this app](http://dreamjob.demo.ericjho.com/) uses the backend written by Rithm School (this was so that students could start with the same codebase when building out the React frontend). I do have a version of the [backend](https://github.com/Inhockorea/express-jobly) separately.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
