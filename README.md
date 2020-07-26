@@ -1,5 +1,7 @@
 # React-DreamJob
 React-DreamJob is a full stack job application made with React.js on the frontend and features Express.js and PostgreSQL on the backend.
+![Dream Job Demo](dreamjob_demo/DreamJob.gif)
+
 
 Deployed: http://dreamjob.demo.ericjho.com/
 
